@@ -1,0 +1,30 @@
+@mixin fz($fontsize){
+    font-size: $fontsize;
+    line-height: $fontsize + 12px;
+}
+
+@mixin p-x($padding){
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+@mixin p-y($padding){
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+@mixin color-gradient-y($kind: "text") {
+    @include gradient-y($start-color: $success, $end-color: $info);
+    @if $kind == "text"{
+        color: transparent!important;
+        background-clip: text;
+    }
+}
+
+@mixin color-gradient-x($kind: "text") {
+    @include gradient-x($start-color: $success, $end-color: $info);
+    @if $kind == "text"{
+        color: transparent!important;
+        background-clip: text;
+    }
+}

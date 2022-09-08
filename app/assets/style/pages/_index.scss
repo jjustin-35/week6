@@ -1,0 +1,200 @@
+.banner{
+    background-image: url('../images/bg_home_mobile.jpg');
+    height: 336px;
+    @include media-breakpoint-up(md){
+        background-image: url('../images/bg_home.jpg');
+        height: 680px;
+    }
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-sub{
+        font-style: 14px;
+    }
+}
+
+.border-point{
+    width: 10px;
+    height: 10px;
+    &-ts{
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    &-te{
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+    &-bs{
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+    }
+    &-be{
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+    }
+}
+
+.step{
+    &-title{
+        margin-bottom: 74px;
+    }
+    &-number{
+        transform: translate(0, -50%);
+    }
+}
+
+.lesson{
+    &-btn{
+        background: linear-gradient(104deg, $info, $success);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.merit-bg{
+    min-height: 263px;
+    @include media-breakpoint-up(md){
+        min-height: 615px;
+    }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-1{
+        background-image: url('../images/info01.jpg');
+    }
+    &-2{
+        background-image: url('../images/info02.jpg');
+    }
+    &-3{
+        background-image: url('../images/info03.jpg');
+    }
+    &-4{
+        background-image: url('../images/info04.jpg');
+    }
+}
+
+.article-border{
+    @include media-breakpoint-up(lg){
+        position:relative;
+    &:before, &:after, &>:first-child:before, &>:first-child:after {
+        transition: all 0.25s ease;
+        position:absolute;
+        width:32px; height: 32px;
+        border-color: $primary; 
+        border-style:solid; /* or whatever style */
+        content: ' ';
+    }
+    &:before {
+        top:0;left:0;border-width: 1px 0 0 1px;
+        border-top-left-radius: 12px;
+    }
+    &:after {top:0;right:0;border-width: 1px 1px 0 0;
+        border-top-right-radius: 12px;
+    }
+    &>:first-child:before {bottom:0;right:0;border-width: 0 1px 1px 0; border-bottom-right-radius: 12px;}
+    &>:first-child:after {bottom:0;left:0;border-width: 0 0 1px 1px; border-bottom-left-radius: 12px;}
+
+    &:hover{
+        &:before, &:after, &>:first-child:before, &>:first-child:after{
+            border-color: $success;
+        }
+    }
+    }
+}
+
+.share{
+    &-page{
+    background-image: url('../images/bg_share.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 773px;
+    }
+    &-card{
+        max-width: 416px;
+        border-bottom-left-radius: 0;
+        position: relative;
+        &-picture{
+            width: 80px;
+            height: 80px;
+            @include media-breakpoint-up(md){
+                width: 100px;
+                height: 100px;
+            }
+            top: 0;
+            right: 32px;
+            transform: translate(0, -50%);
+        }
+    }
+}
+
+.swiper2.swiper{
+    @include media-breakpoint-up(md){
+        max-width: 925px;
+    }
+    width: 100%;
+    .swiper{
+        &-slide{
+            min-height: 436px;
+            @include media-breakpoint-up(md){
+                min-height: 429px;
+            }
+        }
+        &-img{
+            width: 100%;
+            margin-bottom: 45px;
+            @include media-breakpoint-up(md){
+                max-width: 525px;
+                min-height: 381px;
+            }
+        }
+    }
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    width: fit-content;
+}
+.swiper-pagination{
+    z-index: 1;
+}
+.my-bullet{
+    transition: all 0.25s ease;
+    margin: 8px;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: $success;
+    &-active{
+        width: 16px;
+        border-radius: 50rem;
+    }
+}
+.swiper-button{
+    // 它會自然顯示icon，但要先關掉::after
+    &-next::after, &-prev::after {
+        content: "";
+    }
+}
+.pagination-wrapper{
+    @include media-breakpoint-up(md){
+        left: 50px;
+        bottom: 32px;
+    }
+    @include media-breakpoint-up(lg){
+        left: 196px;
+        bottom: 8px;
+    }
+}
+
+.joinus{
+    &-logo{
+        font-size: 80px;
+    }
+    &-wrapper{
+    max-width: 966px;
+    }
+}
